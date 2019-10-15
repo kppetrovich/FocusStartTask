@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Triangle/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            <state relative-caret-position="576">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Triangle/src/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+            <state relative-caret-position="386">
+              <caret line="56" column="104" selection-start-line="56" selection-start-column="104" selection-end-line="56" selection-end-column="104" />
               <folding>
                 <element signature="e#1403#1404#0" expanded="true" />
                 <element signature="e#1427#1428#0" expanded="true" />
@@ -162,7 +162,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Triangle" />
-      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Documents/file" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Documents/file $USER_HOME$/Documents/fileout" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,7 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571153638082</updated>
       <workItem from="1571153646110" duration="1060000" />
-      <workItem from="1571154717049" duration="8551000" />
+      <workItem from="1571154717049" duration="11631000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1571155179541</created>
@@ -211,11 +211,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571161326123</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add fileread stuff">
+      <created>1571163637588</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571163637588</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add file output stuff&#10;Add exceptions">
+      <created>1571164994773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571164994773</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9611000" />
+    <option name="totallyTimeSpent" value="12691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -231,7 +245,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32900432" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -258,7 +272,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
     <MESSAGE value="Add Triangle class with checkers&#10;Add Coordinate class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Triangle class with checkers&#10;Add Coordinate class" />
+    <MESSAGE value="Add fileread stuff" />
+    <MESSAGE value="Add file output stuff&#10;Add exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add file output stuff&#10;Add exceptions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.java">
@@ -290,8 +306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Triangle/src/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        <state relative-caret-position="386">
+          <caret line="56" column="104" selection-start-line="56" selection-start-column="104" selection-end-line="56" selection-end-column="104" />
           <folding>
             <element signature="e#1403#1404#0" expanded="true" />
             <element signature="e#1427#1428#0" expanded="true" />
@@ -304,8 +320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Triangle/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="576">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

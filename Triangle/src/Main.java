@@ -7,8 +7,16 @@ import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) {
-        String fileIn = args[0];
-        String fileOut = args[1];
+        String fileIn = "";
+        String fileOut = "";
+        if (args.length != 2) {
+            System.out.println("Write correct input and output files paths");
+
+
+        } else {
+            fileIn = args[0];
+            fileOut = args[1];
+        }
         String line;
         double currentMaxS = -1;
         boolean isAnswer = false;
@@ -17,29 +25,33 @@ public class Main {
             while ((line = br.readLine()) != null) {
                 String lines[] = line.split(" ");
                 if (lines.length == 6) {
-                    Coordinate currentA = new Coordinate(Integer.parseInt(lines[0]), Integer.parseInt(lines[1]));
-                    Coordinate currentB = new Coordinate(Integer.parseInt(lines[2]), Integer.parseInt(lines[3]));
-                    Coordinate currentC = new Coordinate(Integer.parseInt(lines[4]), Integer.parseInt(lines[5]));
-                    Triangle currentTriangle = new Triangle(currentA, currentB, currentC);
-                    if (currentTriangle.isCorrectCoords()) {
-                        currentTriangle.setSides();
-                        if (currentTriangle.isTriangleExists()) {
-                            if (currentTriangle.isTriangeIsosceles()) {
-                                currentTriangle.setS();
-                                if (currentTriangle.getS() > currentMaxS) {
-                                    answerTrinagle = currentTriangle;
-                                    isAnswer = true;
+                    try {
+                        Coordinate currentA = new Coordinate(Integer.parseInt(lines[0]), Integer.parseInt(lines[1]));
+                        Coordinate currentB = new Coordinate(Integer.parseInt(lines[2]), Integer.parseInt(lines[3]));
+                        Coordinate currentC = new Coordinate(Integer.parseInt(lines[4]), Integer.parseInt(lines[5]));
+                        Triangle currentTriangle = new Triangle(currentA, currentB, currentC);
+                        if (currentTriangle.isCorrectCoords()) {
+                            currentTriangle.setSides();
+                            if (currentTriangle.isTriangleExists()) {
+                                if (currentTriangle.isTriangeIsosceles()) {
+                                    currentTriangle.setS();
+                                    if (currentTriangle.getS() > currentMaxS) {
+                                        answerTrinagle = currentTriangle;
+                                        isAnswer = true;
+                                    }
                                 }
                             }
                         }
-                    }
 
+                    } catch (NumberFormatException nfe){
+
+                    }
                 }
             }
         } catch (AccessDeniedException ac) {
             System.out.println("Error, check access rights to the file in");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Something went wrong");
         }
 
         if (isAnswer) {
@@ -48,7 +60,7 @@ public class Main {
             } catch (AccessDeniedException ac) {
                 System.out.println("Error, check access rights to the file out");
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println("Something went wrong");
             }
         }
     }

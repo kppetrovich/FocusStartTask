@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.AccessDeniedException;
 import java.nio.file.Files;
@@ -43,13 +44,15 @@ public class Main {
                             }
                         }
 
-                    } catch (NumberFormatException nfe){
+                    } catch (NumberFormatException nfe) {
 
                     }
                 }
             }
         } catch (AccessDeniedException ac) {
             System.out.println("Error, check access rights to the file in");
+        } catch (FileNotFoundException fnf) {
+            System.out.println("Error, file in is not exists");
         } catch (IOException e) {
             System.out.println("Something went wrong");
         }

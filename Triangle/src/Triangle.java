@@ -23,7 +23,7 @@ public class Triangle {
     }
 
     public Boolean isTriangleExists(){
-        return ((this.slide1 < this.slide2+this.slide3) && (this.slide2 < this.slide1+this.slide3) && (this.slide3 < this.slide1+this.slide2));
+        return ((this.slide1 < (long) this.slide2+this.slide3) && (this.slide2 < (long)  this.slide1+this.slide3) && (this.slide3 < (long) this.slide1+this.slide2));
     }
 
     public boolean isTriangeIsosceles(){
@@ -34,12 +34,12 @@ public class Triangle {
         return isTriangleIsosceles;
     }
     public void setS(){
-        double p=(this.slide1+this.slide2+this.slide3)/2;
-        this.S= Math.sqrt(p*(p-this.slide1)*(p-this.slide2)*(p-slide3));
+        double p=(long) (this.slide1+this.slide2+this.slide3)/2;
+        this.S=  Math.sqrt(p*(p-this.slide1)*(p-this.slide2)*(p-slide3));
     }
 
     public double getS() {
-        return S;
+        return this.S;
     }
 
     public int getSlide1() {

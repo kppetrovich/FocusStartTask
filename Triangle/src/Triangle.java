@@ -53,5 +53,8 @@ public class Triangle {
     public int getSlide3() {
         return this.slide3;
     }
+    public String getCoords(){
+        return this.A.getX()+" "+this.A.getY()+" "+this.B.getX()+" "+this.B.getY()+" "+this.C.getX()+" "+this.C.getY();
+    }
 
 }

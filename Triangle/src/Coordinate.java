@@ -1,25 +1,25 @@
 public class Coordinate {
-    private int a;
-    private int b;
+    private int x;
+    private int y;
 
-    public Coordinate(int a, int b) {
-        this.a = a;
-        this.b = b;
+    public Coordinate(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public int getA() {
-        return a;
+    public int getX() {
+        return x;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public void setX(int a) {
+        this.x = x;
     }
 
-    public int getB() {
-        return b;
+    public int getY() {
+        return y;
     }
 
     public void setB(int b) {
-        this.b = b;
+        this.y = y;
     }
 }

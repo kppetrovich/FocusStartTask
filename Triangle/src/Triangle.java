@@ -2,44 +2,56 @@ public class Triangle {
     private Coordinate A;
     private Coordinate B;
     private Coordinate C;
-    private int a;
-    private int b;
-    private int c;
-
-    public Boolean isTriangleExists(){
-        return ((this.a < this.b+this.c) && (this.b < this.a+this.c) && (this.c < this.a+this.b));
-    }
-    public Boolean checkCoords(){
-        return false;
-    }
 
     public Triangle(Coordinate a, Coordinate b, Coordinate c) {
         this.A = a;
         this.B = b;
         this.C = c;
     }
+    private int slide1;
+    private int slide2;
+    private int slide3;
+    private double S;
 
-    public int getA() {
-        return a;
+    public Boolean isCorrectCoords(){
+        return ((this.C.getX()-this.A.getX())*(this.B.getY()-this.A.getY())!=(this.C.getY()-this.A.getY())*(this.B.getX()-this.A.getX()));
+    }
+    public void setSides() {
+        this.slide1 = (int) Math.sqrt(Math.pow(this.B.getX()-this.A.getX(), 2)+Math.pow(this.B.getY()-this.A.getY(), 2));
+        this.slide2 = (int) Math.sqrt(Math.pow(this.C.getX()-this.B.getX(), 2)+Math.pow(this.C.getY()-this.B.getY(), 2));
+        this.slide3 = (int) Math.sqrt(Math.pow(this.C.getX()-this.A.getX(), 2)+Math.pow(this.C.getY()-this.A.getY(), 2));
     }
 
-    public void setA() {
-        this.a = (int) Math.sqrt(Math.pow(this.A.getB(), 2)-Math.pow(this.A.getA(), 2));
+    public Boolean isTriangleExists(){
+        return ((this.slide1 < this.slide2+this.slide3) && (this.slide2 < this.slide1+this.slide3) && (this.slide3 < this.slide1+this.slide2));
     }
 
-    public int getB() {
-        return b;
+    public boolean isTriangeIsosceles(){
+        boolean isTriangleIsosceles = false;
+        if ((this.slide1==this.slide2 || this.slide2==this.slide3 || this.slide1==this.slide3) && (this.slide1!=this.slide2) || this.slide2!=this.slide3 || this.slide1!=this.slide3){
+            isTriangleIsosceles = true;
+        }
+        return isTriangleIsosceles;
+    }
+    public void setS(){
+        double p=(this.slide1+this.slide2+this.slide3)/2;
+        this.S= Math.sqrt(p*(p-this.slide1)*(p-this.slide2)*(p-slide3));
     }
 
-    public void setB(int b) {
-        this.b = (int) Math.sqrt(Math.pow(this.B.getB(), 2)-Math.pow(this.B.getA(), 2));
+    public double getS() {
+        return S;
     }
 
-    public int getC() {
-        return c;
+    public int getSlide1() {
+        return this.slide1;
     }
 
-    public void setC(int c) {
-        this.c = (int) Math.sqrt(Math.pow(this.C.getB(), 2)-Math.pow(this.C.getA(), 2));
+    public int getSlide2() {
+        return this.slide2;
     }
+
+    public int getSlide3() {
+        return this.slide3;
+    }
+
 }

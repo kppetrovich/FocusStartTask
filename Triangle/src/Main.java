@@ -12,7 +12,7 @@ public class Main {
         String fileOut = "";
         if (args.length != 2) {
             System.out.println("Write correct input and output files paths");
-
+            System.exit(0);
 
         } else {
             fileIn = args[0];
